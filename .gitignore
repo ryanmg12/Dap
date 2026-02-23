@@ -1,0 +1,10 @@
+# Go build artifacts
+backend/dap
+backend/*.exe
+
+# Node / frontend
+frontend/node_modules/
+frontend/dist/
+
+# OS
+.DS_Store
