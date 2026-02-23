@@ -1,0 +1,149 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--green-dark);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.navbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navbar-logo {
+  font-size: 1.75rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.logo-dap {
+  color: var(--white);
+  letter-spacing: -1px;
+}
+
+.logo-dot {
+  color: var(--gold);
+}
+
+.navbar-search {
+  flex: 1;
+  max-width: 400px;
+  display: flex;
+  background: rgba(255,255,255,0.12);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.navbar-search:focus-within {
+  background: rgba(255,255,255,0.18);
+  border-color: var(--gold);
+}
+
+.navbar-search input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--white);
+  font-size: 0.9rem;
+}
+
+.navbar-search input::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+.navbar-search button {
+  padding: 0 0.75rem;
+  color: rgba(255,255,255,0.7);
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.navbar-search button:hover {
+  color: var(--gold);
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-left: auto;
+}
+
+.navbar-links a {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar-links a:hover {
+  color: var(--white);
+}
+
+.navbar-links .btn-add {
+  background: var(--gold);
+  color: var(--black) !important;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.2s !important;
+}
+
+.navbar-links .btn-add:hover {
+  background: var(--gold-dark) !important;
+}
+
+.navbar-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+  margin-left: auto;
+}
+
+.navbar-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+}
+
+@media (max-width: 640px) {
+  .navbar-search {
+    display: none;
+  }
+
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: var(--green-dark);
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-left: 0;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-hamburger {
+    display: flex;
+  }
+}

@@ -1,0 +1,44 @@
+.star-rating {
+  display: flex;
+  gap: 2px;
+}
+
+.star-rating button {
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.star-rating button:disabled {
+  cursor: default;
+}
+
+.star-rating button:not(:disabled):hover {
+  transform: scale(1.2);
+}
+
+.star-rating--sm button {
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+.star-rating--md button {
+  font-size: 1.5rem;
+  color: #ddd;
+}
+
+.star-rating--lg button {
+  font-size: 2rem;
+  color: #ddd;
+}
+
+.star-rating button.filled {
+  color: #f4a261;
+}
+
+.star-rating--readonly button {
+  pointer-events: none;
+}
