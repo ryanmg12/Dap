@@ -1,5 +1,6 @@
 # Go build artifacts
 backend/dap
+backend/backend
 backend/*.exe
 
 # Node / frontend
