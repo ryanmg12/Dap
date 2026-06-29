@@ -94,3 +94,25 @@ Dap/
 | `POST` | `/api/businesses/:id/reviews` | Submit a review |
 | `GET` | `/api/featured` | Get top-rated businesses |
 | `GET` | `/api/categories` | List all categories |
+
+## Copilot Instructions
+
+Project-specific GitHub Copilot guidance lives in `.github/copilot-instructions.md`.
+
+## Go Skills Discovery Utility
+
+This repository also includes a small Go CLI that discovers Copilot cross-client skills from `~/.copilot/skills`.
+
+### Run
+
+```bash
+go run ./cmd/dap
+```
+
+### Test
+
+```bash
+go test ./...
+```
+
+If you installed `cc-skills-golang` at `~/.copilot/skills/cc-skills-golang`, it appears in the discovered skills list.
